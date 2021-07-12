@@ -34,8 +34,7 @@ def test_symmetric():
     """
     None
     # TODO: Implement for Task 0.2.
-    raise NotImplementedError('Need to implement for Task 0.2')
-
+    return operators.mul(2, 3) == operators.mul(3, 2)
 
 @pytest.mark.task0_2
 def test_distribute():
@@ -45,7 +44,7 @@ def test_distribute():
     """
     None
     # TODO: Implement for Task 0.2.
-    raise NotImplementedError('Need to implement for Task 0.2')
+    return (operators.mul(3, operators.add(2, 5)) == operators.add(operators.mul(3, 2), operators.mul(3, 5)))
 
 
 @pytest.mark.task0_2
@@ -55,7 +54,7 @@ def test_other():
     """
     None
     # TODO: Implement for Task 0.2.
-    raise NotImplementedError('Need to implement for Task 0.2')
+    return operators.lt(4, 7) == 1.0 and operators.lt(7, 4) == 0.0 and operators.eq(4, 4) == 1.0 and operators.eq(4, 7) == 0.0 and operators.max(7, 4) == 7
 
 
 # HIGHER ORDER
