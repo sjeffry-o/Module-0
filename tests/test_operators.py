@@ -32,8 +32,6 @@ def test_symmetric():
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
-    None
-    # TODO: Implement for Task 0.2.
     return operators.mul(2, 3) == operators.mul(3, 2)
 
 @pytest.mark.task0_2
@@ -42,8 +40,6 @@ def test_distribute():
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    None
-    # TODO: Implement for Task 0.2.
     return (operators.mul(3, operators.add(2, 5)) == operators.add(operators.mul(3, 2), operators.mul(3, 5)))
 
 
@@ -52,8 +48,6 @@ def test_other():
     """
     Write a test that ensures some other property holds for your functions.
     """
-    None
-    # TODO: Implement for Task 0.2.
     return operators.lt(4, 7) == 1.0 and operators.lt(7, 4) == 0.0 and operators.eq(4, 4) == 1.0 and operators.eq(4, 7) == 0.0 and operators.max(7, 4) == 7
 
 
@@ -77,7 +71,7 @@ def test_property(ls1, ls2):
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError('Need to implement for Task 0.3')
+    assert_close(operators.sum(ls1) + operators.sum(ls2), operators.sum(operators.addLists(ls1, ls2)))
 
 
 @pytest.mark.task0_3
