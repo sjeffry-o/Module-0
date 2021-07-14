@@ -51,7 +51,6 @@ def test_module():
 def test_stacked_module():
     "Check the properties of a stacked module"
     module = Module1()
-    print(module)
     module.eval()
     assert module.mode == "eval"
     assert module.module_a.mode == "eval"
