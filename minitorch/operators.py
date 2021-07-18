@@ -113,7 +113,9 @@ def map(fn):
     Returns:
         function : a function that takes a list and applies `fn` to each element
     """
-    return (fn)
+    def _mapping(lst):
+        return [fn(val) for val in lst]
+    return _mapping
 
 def negList(ls):
     "Use :func:`map` and :func:`neg` to negate each element in `ls`"
